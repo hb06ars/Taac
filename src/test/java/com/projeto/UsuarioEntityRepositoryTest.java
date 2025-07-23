@@ -32,6 +32,7 @@ class UsuarioEntityRepositoryTest {
         registry.add("spring.datasource.url", postgres::getJdbcUrl); // Ex: jdbc:postgresql://localhost:random_port/taac
         registry.add("spring.datasource.username", postgres::getUsername);
         registry.add("spring.datasource.password", postgres::getPassword);
+        registry.add("spring.datasource.driver-class", postgres::getDriverClassName);
         registry.add("spring.jpa.hibernate.ddl-auto", () -> "update"); // Para criar automaticamente as tabelas, pelo docker.
     }
 
